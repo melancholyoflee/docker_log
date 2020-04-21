@@ -1,5 +1,4 @@
-FROM ubuntu:18.04
-
-RUN apt update && apt install nginx -y
-
-CMD service nginx start && /bin/bash
+ROM perl:5.20
+COPY . /usr/src/myapp
+WORKDIR /usr/src/myapp
+CMD [ "perl", "./hello.pl" ]
